@@ -1,5 +1,5 @@
 body {
-    background-color: lightgray;
+    background-color: white;
 }
 
 header {
@@ -7,8 +7,12 @@ header {
 }
 
 .cent {
-    display: block;
     margin-left: auto;
     margin-right: auto;
     width: 50%;
+}
+
+.H1D {
+    border: 1px solid black;
+    background-color: lightgray;
 }
