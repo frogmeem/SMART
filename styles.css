@@ -1,11 +1,18 @@
+/* sorry i played around with these a bit, you can change them if you want */
+
 body {
-    background-color: lightgray;
+    background-color: white;
 }
 
 header {
     color: black;
 }
 
+div {
+    background-color: lightgray;
+}
+
+/* start of CSS used in the homepage */
 .centimg {
     margin-left: auto;
     margin-right: auto;
@@ -15,7 +22,7 @@ header {
 .cent {
     margin-left: auto;
     margin-right: auto;
-    width: 50%;
+    width: 47%;
     display: block
 }
 
@@ -24,13 +31,25 @@ header {
     margin-right: auto;
     width: 20%
 }
-.H1D {
+.HD1 {
     border: 1px solid black;
     background-color: white;
     padding: 20px 20px 20px 20px;
     margin: 20px
+
+}
+
+.marg {
+    margin-left: 40px;
+}
+
+.divTop {
+    box-shadow: 0 -10px 10px rgba(0,0,0,.1) ;
+    
 }
 
 .homepageText {
     font:18px, serif;
 }
+
+/*end of CSS used in Homepage */
