@@ -45,10 +45,15 @@ div {
     
 }
 
+.divTop nav ul {
+    list-style-type: none;
+}
+
 .divTop nav ul li a {
     color: black;
     font-size: 26px;
     font-weight: bold;
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
     text-decoration: none;
 }
 
