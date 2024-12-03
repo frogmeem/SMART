@@ -58,16 +58,18 @@ div {
 }
 
 .divTop nav ul li a:visited {
-    color: purple;
+    color: black;
 }
 
 .divTop nav ul li a:hover {
-    color: #575757;
+    color: lightgray;
 }
 
 .homepageText {
-    font:18px, serif;
+    font:18px;
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
 }
+
 
 /*end of CSS used in Homepage */
 
