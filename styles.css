@@ -5,7 +5,7 @@ header {
 }
 
 div {
-    background-color: lightgray;
+    background-color: maroon;
 }
 
 /* start of CSS used in the homepage */
@@ -50,7 +50,7 @@ div {
 }
 
 .divTop nav ul li a {
-    color: black;
+    color: white;
     font-size: 26px;
     font-weight: bold;
     font-family: "Trebuchet MS", Helvetica, sans-serif;
@@ -58,11 +58,15 @@ div {
 }
 
 .divTop nav ul li a:visited {
-    color: black;
+    color: purple;
 }
 
 .divTop nav ul li a:hover {
     color: #575757;
+}
+
+.divTop nav img {
+    float: left;
 }
 
 .homepageText {
