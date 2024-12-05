@@ -7,7 +7,7 @@
   </head>
   <body>
     <header>
-      <img class="centimg" src="/image assets/smartlogo.png" alt="SMART logo">
+      <img class="centimg" src="/image_assets/smartlogo.png" alt="SMART logo">
     </header> 
     <nav class="navbar">
       <a href="index.html">Home</a>
@@ -22,7 +22,7 @@
             <ul>
               <li><a href="index.html">Pierce Dining Hall</a></li>
             </ul>
-            <img src="/image assets/pierce1.jpeg" width=350 height=300 alt="Pierce Dining Hall" class="marg">
+            <img src="/image_assets/pierce1.jpeg" width=350 height=300 alt="Pierce Dining Hall" class="marg">
             <ul>
               <li><a href="UCC.html">UCC dining complex</a></li>
             </ul>
@@ -41,6 +41,28 @@
           </div>
           <br>
           </div>
+        <div class="container">
+          <h1>Submit A Review!
+          </h1>
+          <div class="rating">
+            <span id="rating">0</span>/5
+          </div>
+          <div class="stars" id="stars">
+            <span class="star" data-value="1">★</span>
+            <span class="star" data-value="2">★</span>
+            <span class="star" data-value="3">★</span>
+            <span class="star" data-value="4">★</span>
+            <span class="star" data-value="5">★</span>
+          </div>
+          <p>Share your review:</p>
+          <textarea id="review"
+              placeholder="Write your review here">
+          </textarea>
+          <button id="submit">Submit</button>
+          <div class="reviews" id="reviews">
+          </div>
+        </div>
+        <script src="forms.js"></script>
       </main>
   </body>
 </html>
