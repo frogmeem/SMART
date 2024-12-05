@@ -314,3 +314,8 @@ button:hover {
 .review p {
     margin: 0;
 }
+
+.title {
+    padding: 5px;
+    padding-top: 12px;
+}
