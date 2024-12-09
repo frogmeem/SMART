@@ -34,9 +34,28 @@
     <div class="review-box">
         <img src="image_assets/IMG_3976.jpeg" alt="Pierce food" class="pierceimg">
         <h3>Feel Good Foods</h3>
-        <label for="review-pierce">Your Thoughts:</label><br>
-        <textarea id="review-pierce" placeholder="Share your thoughts here..."></textarea>
     </div>
-    
-</body>
+        <div class="container">
+            <h1>Submit A Review!</h1>
+            <p>Your Name:</p>
+            <input type="text" id="username-index" class="username-input" placeholder="Enter your name">
+            <div class="stars">
+                <span class="star" data-value="1">★</span>
+                <span class="star" data-value="2">★</span>
+                <span class="star" data-value="3">★</span>
+                <span class="star" data-value="4">★</span>
+                <span class="star" data-value="5">★</span>
+            </div>
+            <div class="rating">
+              <span class="rating-value">0</span>/5
+            </div>
+            <p>Share your review:</p>
+            <textarea id="review-index" placeholder="Write your review here..."></textarea>
+            <button id="submit-index">Submit</button>
+            <div class="reviews" id="reviews-index">
+            </div>
+        </div>
+        <script src="forms.js"></script>
+        </main>
+    </body>
 </html>

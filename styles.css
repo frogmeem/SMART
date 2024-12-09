@@ -260,15 +260,15 @@ h1 {
 }
 
 .one {
-    color: rgb(255, 0, 0);
+    color: rgb(255, 255, 0);
 }
 
 .two {
-    color: rgb(255, 106, 0);
+    color: rgb(255, 255, 0);
 }
 
 .three {
-    color: rgb(251, 255, 120);
+    color: rgb(255, 255, 0);
 }
 
 .four {
@@ -276,7 +276,7 @@ h1 {
 }
 
 .five {
-    color: rgb(24, 159, 14);
+    color: rgb(255, 255, 0);
 }
 
 textarea {
