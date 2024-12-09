@@ -22,7 +22,7 @@ function setupReviewBox(box) {
 
     if (!rating || !reviewText || !usernameInput || !submitBtn || !stars.length) return;
 
-    stars.forEach((star) => {
+    stars.forEach((star) => { // Star code referenced from:https://www.geeksforgeeks.org/create-a-product-review-and-rating-system-using-html-css-and-javascript/
         star.addEventListener("click", () => {
             const value = parseInt(star.getAttribute("data-value"));
             rating.innerText = value;
