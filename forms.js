@@ -16,10 +16,11 @@ function setupReviewBox(box) {
     const rating = box.querySelector(".rating-value");
     const reviewText = box.querySelector("textarea");
     const usernameInput = box.querySelector(".username-input");
+    const dropdown = box.querySelector("#location-dropdown");
     const submitBtn = box.querySelector("button");
     const reviewsContainer = box.querySelector(".reviews");
 
-    if (!stars.length || !rating || !reviewText || !usernameInput || !submitBtn || !reviewsContainer) return;
+    if (!rating || !reviewText || !usernameInput || !submitBtn || !stars.length) return;
 
     stars.forEach((star) => {
         star.addEventListener("click", () => {
@@ -38,26 +39,39 @@ function setupReviewBox(box) {
         const userRating = parseInt(rating.innerText);
         const review = reviewText.value.trim();
         const username = usernameInput.value.trim();
+        const location = dropdown ? dropdown.value : null;
 
         if (!userRating || !review || !username) {
             alert("Please provide a rating, username, and review before submitting.");
             return;
         }
 
-        // Append review
-        const reviewElement = document.createElement("div");
-        reviewElement.classList.add("review");
-        reviewElement.innerHTML = `
-            <p><strong>${username}</strong> - <strong>Rating: ${userRating}/5</strong></p>
-            <p>${review}</p>
-        `;
-        reviewsContainer.appendChild(reviewElement);
+        // Determine where to append the review
+        let targetContainer;
+        if (location === "UCC") {
+            targetContainer = document.querySelector("#reviews-ucc"); // Adjust to UCC's review section ID
+        } else if (location === "Pierce") {
+            targetContainer = document.querySelector("#reviews-pierce"); // Adjust to Pierce's review section ID
+        }
 
-        // Reset inputs
-        reviewText.value = "";
-        usernameInput.value = "";
-        rating.innerText = "0";
-        stars.forEach((s) => s.classList.remove("one", "two", "three", "four", "five", "selected"));
+        if (targetContainer) {
+            // Append the review
+            const reviewElement = document.createElement("div");
+            reviewElement.classList.add("review");
+            reviewElement.innerHTML = `
+                <p><strong>${username}</strong> - <strong>Rating: ${userRating}/5</strong></p>
+                <p>${review}</p>
+            `;
+            targetContainer.appendChild(reviewElement);
+
+            // Reset inputs
+            reviewText.value = "";
+            usernameInput.value = "";
+            rating.innerText = "0";
+            stars.forEach((s) => s.classList.remove("one", "two", "three", "four", "five", "selected"));
+        } else {
+            alert("Invalid location selected.");
+        }
     });
 }
 
