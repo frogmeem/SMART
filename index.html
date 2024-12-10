@@ -44,8 +44,9 @@
           </div>
           <div class="container">
             <h1>Submit A Review!</h1>
-            <p>Your Name:</p>
-            <input type="text" id="username-index" class="username-input" placeholder="Enter your name">
+            <div class="rating">
+                <span class="rating-value">0</span>/5
+            </div>
             <div class="stars">
                 <span class="star" data-value="1">★</span>
                 <span class="star" data-value="2">★</span>
@@ -53,26 +54,25 @@
                 <span class="star" data-value="4">★</span>
                 <span class="star" data-value="5">★</span>
             </div>
-            <div class="rating">
-              <span class="rating-value">0</span>/5
-            </div>
-            <p>Share your review:</p>
+            <p>Your Name:</p>
+            <input type="text" id="username-index" class="username-input" placeholder="Enter your name">
             <p>Dining Location:</p>
             <select id="location-dropdown">
                 <option value="UCC">UCC</option>
                 <option value="Pierce">Pierce Dining Hall</option>
             </select>
+            <p>Share your review:</p>
             <textarea id="review-index" placeholder="Write your review here..."></textarea>
             <button id="submit-index">Submit</button>
+        
             <div class="reviews" id="reviews-index">
-            </div>
-            <div class="reviews" id="reviews-ucc">
-              <h4>UCC Reviews</h4>
+                <h4>UCC Reviews</h4>
             </div>
             <div class="reviews" id="reviews-pierce">
-              <h4>Pierce Dining Hall Reviews</h4>
+                <h4>Pierce Dining Hall Reviews</h4>
             </div>
-          </div>        
+        </div>
+                
         <script src="forms.js"></script>
       </main>
   </body>

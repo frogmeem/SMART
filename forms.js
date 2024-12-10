@@ -16,13 +16,13 @@ function setupReviewBox(box) {
     const rating = box.querySelector(".rating-value");
     const reviewText = box.querySelector("textarea");
     const usernameInput = box.querySelector(".username-input");
-    const dropdown = box.querySelector("#location-dropdown");
+    const dropdown = box.querySelector("#location-dropdown"); // Optional
     const submitBtn = box.querySelector("button");
     const reviewsContainer = box.querySelector(".reviews");
 
     if (!rating || !reviewText || !usernameInput || !submitBtn || !stars.length) return;
 
-    stars.forEach((star) => { // Star code referenced from:https://www.geeksforgeeks.org/create-a-product-review-and-rating-system-using-html-css-and-javascript/
+    stars.forEach((star) => {
         star.addEventListener("click", () => {
             const value = parseInt(star.getAttribute("data-value"));
             rating.innerText = value;
@@ -39,19 +39,25 @@ function setupReviewBox(box) {
         const userRating = parseInt(rating.innerText);
         const review = reviewText.value.trim();
         const username = usernameInput.value.trim();
-        const location = dropdown ? dropdown.value : null;
+        const location = dropdown ? dropdown.value : null; // Only exists in index.html
 
         if (!userRating || !review || !username) {
             alert("Please provide a rating, username, and review before submitting.");
             return;
         }
 
-        // Determine where to append the review
         let targetContainer;
-        if (location === "UCC") {
-            targetContainer = document.querySelector("#reviews-ucc"); // Adjust to UCC's review section ID
-        } else if (location === "Pierce") {
-            targetContainer = document.querySelector("#reviews-pierce"); // Adjust to Pierce's review section ID
+
+        // If dropdown exists (index.html)
+        if (dropdown) {
+            if (location === "UCC") {
+                targetContainer = document.querySelector("#reviews-index"); // Adjust to UCC container on index.html
+            } else if (location === "Pierce") {
+                targetContainer = document.querySelector("#reviews-pierce"); // Adjust to Pierce container on index.html
+            }
+        } else {
+            // No dropdown: use the local reviews container
+            targetContainer = reviewsContainer;
         }
 
         if (targetContainer) {
